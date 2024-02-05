@@ -34,5 +34,6 @@ converterhorario("10:16");
 converterhorario("17:16");
 
 //https://www.youtube.com/watch?v=OYPbr6ZG3pc&ab_channel=MatheusBattisti-HoradeCodar
-let numeroSorteado = Math.floor(Math.random() * 10) + 1;
+let numeroSorteado = Math.floor(Math.random() * 100) + 1;
 console.log("Número sorteado:", numeroSorteado);
+//Código utilizado a biblioteca math para imprimir um número aleatório entre um e cem.
