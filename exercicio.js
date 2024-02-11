@@ -1,5 +1,4 @@
 //Exercicios de Fundamentos lecionados no módulo 1 da aula do professor Matheus Battisti sobre javascript
-
 // Imprima um Olá mundo no console
 console.log('ola');
 //Converta o valor de uma string "1234" em número e exiba o tipo da variável no console.
