@@ -36,3 +36,6 @@ converterhorario("17:16");
 let numeroSorteado = Math.floor(Math.random() * 100) + 1;
 console.log("Número sorteado:", numeroSorteado);
 //Código utilizado a biblioteca math para imprimir um número aleatório entre um e cem.
+function soma(a,b)
+
+console.log(soma(1,8)
