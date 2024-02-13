@@ -39,3 +39,26 @@ console.log("Número sorteado:", numeroSorteado);
 function soma(a,b)
 
 console.log(soma(1,8)
+
+            // URL da API
+const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+
+// Fazendo a requisição GET
+fetch(apiUrl)
+  .then(response => {
+    // Verifica se a resposta da requisição foi bem-sucedida
+    if (!response.ok) {
+      throw new Error('Erro ao carregar os dados');
+    }
+    // Converte a resposta para JSON
+    return response.json();
+  })
+  .then(data => {
+    // Exibe os dados no console
+    console.log(data);
+  })
+  .catch(error => {
+    // Exibe qualquer erro ocorrido no console
+    console.error('Erro:', error);
+  });
+//Estudar requisição Fetch-API
