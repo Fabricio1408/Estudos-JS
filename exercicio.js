@@ -67,3 +67,21 @@ fetch('https://jsonplaceholder.typicode.com/posts')
   .then(data => console.log(data))
   .catch(error => console.error('Erro:', error));
 
+//consumo simples de API
+
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${apiKey}&units=metric`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data); 
+            if (data.main && data.main.temp && data.wind) {
+                h1.textContent = data.name;
+                degress.textContent = `${Math.round(data.main.temp)}°C`;
+                wind.textContent = `Wind: ${data.wind.speed} m/s`;
+                img.src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+                alert('Cidade inválida😞')
+            }
+        })
+
