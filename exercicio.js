@@ -1,4 +1,4 @@
-//Exercicios de Fundamentos lecionados no módulo 1 da aula do professor Matheus Battisti sobre javascript
+se//Exercicios de Fundamentos lecionados no módulo 1 da aula do professor Matheus Battisti sobre javascript
 // Imprima um Olá mundo no console
 console.log('ola');
 //Converta o valor de uma string "1234" em número e exiba o tipo da variável no console.
@@ -85,3 +85,30 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${apiKe
             }
         })
 
+Claro! Aqui está um exemplo simples de como fazer uma requisição usando o `fetch` em JavaScript:
+
+```javascript
+// URL da API que queremos requisitar
+const url = 'https://api.example.com/data';
+
+// Fazendo a requisição usando fetch
+fetch(url)
+  .then(response => {
+    // Verifica se a resposta da requisição foi bem-sucedida
+    if (!response.ok) {
+      throw new Error('Erro ao obter os dados');
+    }
+    // Converte a resposta para JSON
+    return response.json();
+  })
+  .then(data => {
+    // Manipula os dados obtidos
+    console.log(data);
+  })
+  .catch(error => {
+    // Manipula erros
+    console.error('Erro:', error);
+  });
+```
+
+Neste exemplo, fazemos uma requisição para a URL especificada e tratamos a resposta usando os métodos `.then()` e `.catch()` para lidar com os dados ou erros, respectivamente.
